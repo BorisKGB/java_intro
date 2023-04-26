@@ -18,6 +18,7 @@ public class Main {
     /**
      * Calculate and print minimum, average and maximum values of a List<br>
      * Also for test purposes use two different ways to find minimum and maximum values
+     * Also search for number closest to average in List
      * @param numbers list of integers
      */
     private static void findAndPrintMinMaxMedian(List<Integer> numbers) {
@@ -29,13 +30,22 @@ public class Main {
             if (number < min) min = number;
             sum += number;
         }
+        double average = sum/numbers.size();
         System.out.printf("Min value = %d\n", min);
-        System.out.printf("Average value = %.0f / %d =  %.2f\n", sum, numbers.size(), sum/numbers.size());
+        System.out.printf("Average value = %.0f / %d =  %.2f\n", sum, numbers.size(), average);
         System.out.printf("Max value = %d\n", max);
         System.out.println("---alternative way to get min and max values---");
         System.out.printf("Min value = %d\n", Collections.min(numbers));
         System.out.printf("Max value = %d\n", Collections.max(numbers));
-
+        int closestToAverageIdx = numbers.indexOf((int) average);
+        if (closestToAverageIdx == -1) {
+            closestToAverageIdx = 0;
+            for (int i = 1; i < numbers.size(); i++) {
+                if (Math.abs(average - numbers.get(i)) < Math.abs(average - numbers.get(closestToAverageIdx)))
+                    closestToAverageIdx = i;
+            }
+        }
+        System.out.printf("number in List closest to Average value is '%d' and on index '%d'", numbers.get(closestToAverageIdx), closestToAverageIdx);
     }
 
     /**
