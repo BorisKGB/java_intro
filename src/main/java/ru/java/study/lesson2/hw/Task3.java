@@ -29,8 +29,10 @@ public class Task3 {
             if ((9 < elem && elem <= 99) || (-99 <= elem && elem < -9) ) sumNegIndexes += i;
             result[i] = elem;
         }
-        for (int i = firstNegIndex; i <= lastNegIndex; i++) {
-            if (result[i] < 0) result[i] = sumNegIndexes;
+        if (firstNegIndex != -1) {
+            for (int i = firstNegIndex; i <= lastNegIndex; i++) {
+                if (result[i] < 0) result[i] = sumNegIndexes;
+            }
         }
         return result;
     }
