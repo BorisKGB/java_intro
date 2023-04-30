@@ -1,5 +1,7 @@
 package ru.java.study.lesson4.seminar.task1;
 
+import static ru.java.study.lesson2.hw.Lib.generateNumbersArray;
+
 public class Main {
     /**
      * <a href="https://leetcode.com/problems/reverse-linked-list/">Reverse Linked List</a>
@@ -10,14 +12,21 @@ public class Main {
             if (myList != null) myList = new ListNode(i, myList);
             else myList = new ListNode(i);
         }
+        ListNode myListGenerated = generateList(5, 0,10);
         printList(myList);
-        myList = reverseList(myList);
-        printList(myList);
+        printList(reverseList(myList));
+        System.out.println("for generated list");
+        printList(myListGenerated);
+        printList(reverseList(myListGenerated));
     }
 
     public static void printList(ListNode head) {
+        printList(head, " ");
+    }
+    public static void printList(ListNode head, String delimitter) {
         while (head != null) {
-            System.out.print(head.val + " ");
+            if (head.next != null) System.out.print(head.val + delimitter);
+            else System.out.print(head.val);
             head = head.next;
         }
         System.out.println();
@@ -45,5 +54,20 @@ public class Main {
             head = tmp;
         }
         return result;
+    }
+
+    public static ListNode generateList(int size, int min, int max) {
+        ListNode head = null;
+        ListNode current = new ListNode();
+        for (int number : generateNumbersArray(size, min, max)) {
+            if (head == null) {
+                head = new ListNode(number);
+                current = head;
+            } else {
+                current.next = new ListNode(number);
+                current = current.next;
+            }
+        }
+        return head;
     }
 }
