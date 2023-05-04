@@ -68,4 +68,23 @@ public class Task2 {
         }
         return null;
     }
+
+    /**
+     * Alternative solution built over examples in<br>
+     * https://javarush.com/groups/posts/2584-osobennosti-treemap<br>
+     * https://www.geeksforgeeks.org/stream-min-method-in-java-with-examples/
+     */
+    private static void printEmployeeNamesByPopularityAlternative(List<String> employees) {
+        Map<String, Integer> nameCounter = new HashMap<>();
+        for (String employee : employees) {
+            employee = employee.split(" ")[0];
+            if (nameCounter.containsKey(employee)) {
+                nameCounter.replace(employee, nameCounter.get(employee)+1);
+            }
+            else nameCounter.put(employee, 1);
+        }
+        nameCounter.entrySet().stream().sorted((f, s) -> Integer.compare(s.getValue(), f.getValue())).forEach(el -> {
+            System.out.printf("%s: %d\n", el.getKey(), el.getValue());
+        });
+    }
 }
