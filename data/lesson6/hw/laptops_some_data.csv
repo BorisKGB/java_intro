@@ -1,50 +1,51 @@
-Asus|ZenBook UX430UN|14.0|Intel|Core i7 8550U|16|512|SSD|Windows 10|Black
-Dell|Vostro 3568|15.6|Intel|Core i3 6006U|4|1|HDD|Linux|Black
-HP|15-cd005nv|15.6|AMD|A9-Series A9-9420|6|256|SSD|Windows 10|Silver
-Acer|Swift 3|14.0|Intel|Core i3 7100U|4|128|SSD|Windows 10|White
-Lenovo|Ideapad 320-15IKBN|15.6|Intel|Core i5 7200U|6|256|SSD|Windows 10|Gray
-Asus|Q524UQ-BHI7T15|15.6|Intel|Core i7 7500U|12|2|HDD|Windows 10|White
-Dell|Inspiron 3552|15.6|Intel|Celeron Dual Core N3060|4|500|HDD|Linux|Black
-Asus|Rog GL502VS|15.6|Intel|Core i7 6700HQ|16|256|SSD|Windows 10|Gray
-HP|EliteBook x360|13.3|Intel|Core i5 7200U|4|256|SSD|Windows 10|Gray
-Lenovo|ThinkPad X1|14.0|Intel|Core i7 6500U|8|256|SSD|Windows 10|Gold
-Razer|Blade Pro|17.3|Intel|Core i7 7820HK|32|1|SSD|Windows 10|White
-Asus|Chromebook Flip|12.5|Intel|Core M M7-6Y75|8|64|Flash|Chrome OS|Silver
-HP|250 G6|15.6|Intel|Celeron Dual Core N3060|4|128|SSD|No OS|Gold
-HP|ProBook 450|15.6|Intel|Core i5 7200U|4|500|HDD|Windows 10|Gold
-Dell|Inspiron 5770|17.3|Intel|Core i5 8250U|8|128|SSD|Windows 10|Gold
-HP|ProBook 450|15.6|Intel|Core i3 7100U|4|500|HDD|Windows 10|Gold
-Dell|Inspiron 5570|15.6|Intel|Core i7 8550U|16|256|SSD|Windows 10|White
-Dell|Inspiron 5568|15.6|Intel|Core i3 6100U|4|1|HDD|Windows 10|Blue
-Acer|Nitro AN515-51|15.6|Intel|Core i5 7300HQ|8|256|SSD|Windows 10|Black
-Toshiba|Satellite Pro|15.6|Intel|Core i5 7200U|8|256|SSD|Windows 10|Blue
-HP|ProBook 640|14.0|Intel|Core i5 6200U|4|500|HDD|Windows 10|Silver
-Dell|Inspiron 5770|17.3|Intel|Core i7 8550U|16|256|SSD|Windows 10|Green
-Asus|FX502VM-DM105T|15.6|Intel|Core i7 6700HQ|8|1|HDD|Windows 10|Gray
-Lenovo|Thinkpad T470|14.0|Intel|Core i7 7500U|8|256|SSD|Windows 10|Gray
-HP|15-bw003nv|15.6|AMD|A9-Series 9420|4|256|SSD|Windows 10|Green
-HP|Stream 14-AX001nv|14.0|Intel|Celeron Dual Core N3060|2|32|Flash|Windows 10|Green
-Dell|Precision 3520|15.6|Intel|Core i7 6820HQ|16|512|SSD|Windows 10|Black
-Acer|ES1-523-84K7|15.6|AMD|A8-Series 7410|8|256|SSD|Windows 10|Gray
-HP|ProBook 430|13.3|Intel|Core i7 7500U|8|256|SSD|Windows 10|Silver
-Acer|Aspire 3|15.6|Intel|Celeron Dual Core N3350|4|1|HDD|Linux|White
-HP|ProBook 430|13.3|Intel|Core i5 8250U|4|128|SSD|Windows 10|White
-MSI|GP72VR Leopard|17.3|Intel|Core i7 7700HQ|8|128|SSD|Windows 10|Black
-Dell|Inspiron 7567|15.6|Intel|Core i7 7700HQ|16|128|SSD|Windows 10|Gray
-HP|15-ra044nv|15.6|Intel|Celeron Dual Core N3060|4|500|HDD|Windows 10|Blue
-Lenovo|Legion Y520-15IKBN|15.6|Intel|Core i7 7700HQ|8|128|SSD|Windows 10|Gray
-Acer|Aspire 3|15.6|Intel|Core i5 7200U|4|256|SSD|Windows 10|White
-Acer|C740-C9QX|11.6|Intel|Celeron Dual Core 3205U|2|32|SSD|Chrome OS|Blue
-Lenovo|IdeaPad 320-15IKBN|15.6|Intel|Core i5 7200U|8|2|HDD|No OS|Green
+Manufacturer|Model|Screen size|CPU Manufacturer|CPU Model|RAM Size|Storage size|Storage Type|System|Color
+Lenovo|V330-15IKB|15.6|Intel|Core i5 8250U|8|256|SSD|Windows 10|Gray
+HP|17-BS092ND|17.3|Intel|Core i3 6006U|8|256|SSD|Windows 10|Black
+HP|255 G6|15.6|AMD|A6-Series 9220|4|256|SSD|Windows 10|Blue
+Lenovo|ThinkPad T560|15.6|Intel|Core i5 6200U|8|256|SSD|Windows 10|Silver
+Lenovo|Yoga 500-15ISK|15.6|Intel|Core i7 6500U|4|256|SSD|Windows 10|Black
+Toshiba|Tecra Z50-D-10E|15.6|Intel|Core i5 7200U|8|256|SSD|Windows 10|Silver
+HP|EliteBook 820|12.5|Intel|Core i5 7300U|8|256|SSD|Windows 10|White
+Dell|Inspiron 3552|15.6|Intel|Celeron Dual Core N3060|4|500|HDD|Windows 10|Blue
+MSI|GE73VR 7RF|17.3|Intel|Core i7 7700HQ|16|256|SSD|Windows 10|Silver
+Lenovo|Yoga 720-15IKB|15.6|Intel|Core i7 7700HQ|16|512|SSD|Windows 10|White
+HP|Probook 450|15.6|Intel|Core i5 7200U|8|1|HDD|Windows 10|Gold
+MSI|GT72VR Dominator|17.3|Intel|Core i7 7700HQ|16|256|SSD|Windows 10|Gold
+Lenovo|Lenovo IdeaPad|11.6|Intel|Celeron Dual Core N3350|2|32|Flash|Windows 10|Silver
+Dell|Inspiron 5570|15.6|Intel|Core i5 8250U|8|1|HDD|Windows 10|White
+Acer|Chromebook C731-C78G|11.6|Intel|Celeron Dual Core N3060|4|32|Flash|Chrome OS|White
+HP|Pavilion 15-BC000nv|15.6|Intel|Core i7 6700HQ|6|1|HDD|Windows 10|Blue
+Lenovo|Yoga 730|13.3|Intel|Core i7 8550U|8|512|SSD|Windows 10|Blue
+Asus|Rog Strix|17.3|AMD|Ryzen 1700|16|256|SSD|Windows 10|Gray
+Lenovo|ThinkPad 13|13.3|Intel|Celeron Dual Core 3855U|4|16|Flash|Chrome OS|Gold
+Asus|FX753VD-GC086T|17.3|Intel|Core i5 7300HQ|8|128|SSD|Windows 10|Gold
+Toshiba|Satellite Pro|15.6|Intel|Core i5 7200U|8|128|SSD|Windows 10|Blue
+Asus|X541NA|15.6|Intel|Pentium Quad Core N4200|4|1|HDD|Windows 10|White
+Dell|Inspiron 5570|15.6|Intel|Core i7 8550U|16|256|SSD|Linux|Gray
+Huawei|MateBook X|13.0|Intel|Core i7 7500U|8|512|SSD|Windows 10|Green
+Dell|XPS 15|15.6|Intel|Core i7 7700HQ|32|1|SSD|Windows 10|Gold
+Dell|Precision 3520|15.6|Intel|Core i7 7700HQ|8|256|SSD|Windows 10|Silver
+HP|EliteBook 850|15.6|Intel|Core i7 6500U|8|256|SSD|Windows 7|Green
+Lenovo|Thinkpad T460|14.0|Intel|Core i5 6200U|4|1|SSD|Windows 10|Gold
+Acer|Aspire A517-51G|15.6|Intel|Core i7 8550U|8|256|SSD|Windows 10|Black
+Asus|Zenbook Flip|13.3|Intel|Core i7 7500U|16|512|SSD|Windows 10|Black
+Dell|Latitude 3570|15.6|Intel|Core i3 6100U|4|500|HDD|Windows 10|Black
+MSI|PL60 7RD|15.6|Intel|Core i7 7500U|8|1|HDD|Windows 10|Black
+Lenovo|ThinkPad E470|14.0|Intel|Core i5 7200U|4|500|HDD|Windows 10|Green
+HP|EliteBook 850|15.6|Intel|Core i7 7500U|8|256|SSD|Windows 10|Gold
+Lenovo|ThinkPad X1|14.0|Intel|Core i7 6600U|16|512|SSD|Windows 10|Silver
+Lenovo|Legion Y520-15IKBN|15.6|Intel|Core i7 7700HQ|8|128|SSD|Windows 10|Black
 Asus|VivoBook Max|15.6|Intel|Core i5 7200U|4|256|SSD|Linux|White
-Asus|X541NA-PD1003Y|15.6|Intel|Pentium Quad Core N4200|4|500|HDD|Windows 10|Blue
-Lenovo|IdeaPad Y700-15ISK|15.6|Intel|Core i5 6300HQ|8|128|SSD|Windows 10|Gray
-Lenovo|IdeaPad 320-15AST|15.6|AMD|E-Series E2-9000|4|128|SSD|Windows 10|Silver
-LG|Gram 14Z970|14.0|Intel|Core i7 7500U|8|512|SSD|Windows 10|Silver
-Dell|Insprion 5767|17.3|Intel|Core i3 6006U|4|1|HDD|Windows 10|Black
-HP|EliteBook 840|14.0|Intel|Core i5 6300U|4|256|SSD|Windows 10|Black
-HP|ProBook 650|14.0|Intel|Core i5 7200U|4|500|HDD|Windows 10|Silver
-Lenovo|IdeaPad 100S-14IBR|14.0|Intel|Celeron Dual Core N3060|4|32|Flash|Windows 10|Silver
-Dell|Latitude 5480|14.0|Intel|Core i5 7200U|8|128|SSD|Windows 10|Blue
-Dell|Precision 7520|15.6|Intel|Xeon E3-1505M V6|16|256|SSD|Windows 10|Blue
-Lenovo|V310-15ISK|15.6|Intel|Core i5 7200U|8|128|SSD|Windows 10|Gold
+Asus|Zenbook Flip|13.3|Intel|Core i7 7500U|16|512|SSD|Windows 10|Black
+Dell|XPS 13|13.3|Intel|Core i7 7Y75|16|256|SSD|Windows 10|Green
+Acer|Swift 3|14.0|Intel|Core i7 8550U|8|256|SSD|Windows 10|Gray
+Dell|Precision M5520|15.6|Intel|Core i7 7700HQ|8|256|SSD|Windows 10|White
+HP|EliteBook 820|12.5|Intel|Core i5 7300U|8|256|SSD|Windows 10|White
+Asus|Rog GL502VM-DS74|15.6|Intel|Core i7 7700HQ|16|128|SSD|Windows 10|Silver
+Lenovo|ThinkPad E580|15.6|Intel|Core i5 8250U|8|256|SSD|Windows 10|Gray
+Asus|VivoBook L402NA|14.1|Intel|Celeron Dual Core N3350|4|32|Flash|Windows 10|Green
+Apple|MacBook Pro|13.3|Intel|Core i5|8|256|SSD|macOS|Blue
+Lenovo|Thinkpad X270|12.5|Intel|Core i7 7500U|8|256|SSD|Windows 10|White
+HP|255 G6|15.6|AMD|A6-Series 9220|4|256|SSD|Windows 10|Blue
+Dell|Inspiron 7773|17.3|Intel|Core i5 8250U|12|1|HDD|Windows 10|Blue
+Asus|G752VY-GC162T|17.3|Intel|Core i7 6700HQ|16|128|SSD|Windows 10|Gold
