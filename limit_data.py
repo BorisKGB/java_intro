@@ -14,6 +14,8 @@ with open(from_file, 'r') as csv_file:
 with open(to_file, 'w') as csv_file:
     writer = csv.writer(csv_file, delimiter='|')
     counter = 0
+    # keep table header
+    writer.writerow(data[0])
     while counter < num_rows:
-      writer.writerow(data[random.randint(0, len(data)-1)])
+      writer.writerow(data[random.randint(1, len(data)-1)])
       counter += 1
