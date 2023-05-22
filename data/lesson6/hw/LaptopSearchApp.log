@@ -1,0 +1,8 @@
+мая 22, 2023 9:35:12 PM ru.java.study.lesson6.hw.LaptopSearchApp logDebug
+FINE: Application start
+мая 22, 2023 9:35:18 PM ru.java.study.lesson6.hw.LaptopSearchApp logInfo
+INFO: Loading csv file 'data/lesson6/hw/laptops_some_data.csv'
+мая 22, 2023 9:35:18 PM ru.java.study.lesson6.hw.LaptopSearchApp logInfo
+INFO: Из файла 'data/lesson6/hw/laptops_some_data.csv' получено 50 записей.
+мая 22, 2023 9:35:18 PM ru.java.study.lesson6.hw.LaptopSearchApp logDebug
+FINE: Application end

@@ -7,13 +7,11 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.regex.Pattern;
 
-import static ru.java.study.lesson6.hw.LaptopSearchApp.logger;
-
 public class LaptopSearchData {
     public static Set<LaptopObj> laptops = new HashSet<>();
 
     public static void loadCSV(String filePath, String csvDelimiter) {
-        logger.info("file reading");
+        LaptopSearchApp.logInfo(String.format("Loading csv file '%s'", filePath), false);
         try {
             BufferedReader br = new BufferedReader(new FileReader(filePath));
             String line = br.readLine();
@@ -24,7 +22,7 @@ public class LaptopSearchData {
                     try {
                         laptops.add(new LaptopObj(elements));
                     } catch (IllegalArgumentException e) {
-                        logger.warning("Ошибка загрузки данных из строки "+lineNum);
+                        LaptopSearchApp.logInfo(String.format("Ошибка загрузки данных из строки %d", lineNum), false);
                     }
                 }
                 line = br.readLine();
@@ -32,7 +30,7 @@ public class LaptopSearchData {
             }
             br.close();
         } catch (IOException e) {
-            logger.severe(e.toString());
+            LaptopSearchApp.logError(e.toString(), true);
             LaptopSearchApp.executionError = true;
         }
     }
