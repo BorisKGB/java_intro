@@ -10,7 +10,7 @@ public class LaptopObj {
     private String cpuManufacturer;
     private String cpuModel;
     private Double ramSize;
-    private Double storageSize;
+    private Integer storageSize;
     private String storageType;
     private String system;
     private String color;
@@ -20,7 +20,7 @@ public class LaptopObj {
     private static Set<String> uniqueCPUManufacturer = new HashSet<>();
     private static Set<String> uniqueCPUModel = new HashSet<>();
     private static Set<Double> uniqueRamSize = new HashSet<>();
-    private static Set<Double> uniqueStorageSize = new HashSet<>();
+    private static Set<Integer> uniqueStorageSize = new HashSet<>();
     private static Set<String> uniqueStorageType = new HashSet<>();
     private static Set<String> uniqueSystem = new HashSet<>();
     private static Set<String> uniqueColor = new HashSet<>();
@@ -57,7 +57,8 @@ public class LaptopObj {
         }
         uniqueRamSize.add(ramSize);
         try {
-            this.storageSize = Double.parseDouble(values[6]);
+            this.storageSize = Integer.parseInt(values[6]);
+            if (this.storageSize < 10) this.storageSize *= 1024;
         } catch (NumberFormatException e) {
             LaptopSearchApp.logWarning(String.format("Unable to parse 'storageSize' column, value '%s' treated as 'not set'", values[6]), false);
             this.storageSize = null;
@@ -70,6 +71,47 @@ public class LaptopObj {
         this.color = values[9];
         uniqueColor.add(color);
     }
+
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public Double getScreenSize() {
+        return screenSize;
+    }
+
+    public String getCpuManufacturer() {
+        return cpuManufacturer;
+    }
+
+    public String getCpuModel() {
+        return cpuModel;
+    }
+
+    public Double getRamSize() {
+        return ramSize;
+    }
+
+    public Integer getStorageSize() {
+        return storageSize;
+    }
+
+    public String getStorageType() {
+        return storageType;
+    }
+
+    public String getSystem() {
+        return system;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
     public static Set<String> getUniqueManufacturer() {
         return uniqueManufacturer;
     }
@@ -94,7 +136,7 @@ public class LaptopObj {
         return uniqueRamSize;
     }
 
-    public static Set<Double> getUniqueStorageSize() {
+    public static Set<Integer> getUniqueStorageSize() {
         return uniqueStorageSize;
     }
 

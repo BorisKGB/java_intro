@@ -44,7 +44,46 @@ public class LaptopSearchApp {
     }
 
     private static void showMenu() {
-        System.out.println("There will be menu here, believe me");
+        /*
+        Критерии фильтрации
+          - ОЗУ (double or set criteria)
+          - Объём диска (double or set criteria)
+          - ОС (str/set criteria)
+          - Цвет (str/set criteria)
+          - Производитель (str/set criteria)
+        ---
+        Введите действие:
+        1. Задать/посмотреть фильтр
+        2. Вывести результаты фильтрации
+        3. Выход
+         */
+        boolean continueFlag = true;
+        String userChoice = "";
+        while (continueFlag) {
+            logDebug("Show main menu");
+            System.out.println("-".repeat(10));
+            System.out.println("Выберите действие:");
+            System.out.println("  1. Задать/посмотреть фильтр");
+            System.out.println("  2. Вывести результаты фильтрации");
+            System.out.println("  3. Выход");
+            userChoice = iScanner.nextLine();
+            logDebug(String.format("User action '%s'", userChoice));
+            switch (userChoice) {
+                case "1":
+                    // filtersMenu();
+                    System.out.println("123");
+                    break;
+                case "2":
+                    LaptopSearchData.printLaptops(LaptopSearchData.laptops);
+                    break;
+                case "3":
+                    continueFlag = false;
+                    break;
+                default:
+                    System.out.println("Неизвестный пункт.");
+                    break;
+            }
+        }
     }
 
     /**

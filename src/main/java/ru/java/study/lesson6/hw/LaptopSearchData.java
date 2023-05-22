@@ -34,4 +34,20 @@ public class LaptopSearchData {
             LaptopSearchApp.executionError = true;
         }
     }
+
+    /**
+     * Fancy print laptops
+     * @param laptops Set of LaptopObj to print
+     */
+    public static void printLaptops(Set<LaptopObj> laptops) {
+        int counter = 1;
+        for (LaptopObj laptop : laptops) {
+            String diskSize = (laptop.getStorageSize() % 1024 == 0) ? laptop.getStorageSize()/1024+"TB" : laptop.getStorageSize()+"GB";
+            System.out.printf("%d: %s %s, %s (%.1f\"/%s %s/%.0fGB RAM/%s %s) with %s\n", counter,
+                    laptop.getManufacturer(), laptop.getModel(), laptop.getColor(), laptop.getScreenSize(),
+                    laptop.getCpuManufacturer(), laptop.getCpuModel(), laptop.getRamSize(),
+                    diskSize, laptop.getStorageType(), laptop.getSystem());
+            counter++;
+        }
+    }
 }
