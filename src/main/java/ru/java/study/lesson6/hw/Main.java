@@ -14,7 +14,7 @@ public class Main {
 //    • Далее нужно запросить минимальные значения для указанных критериев - сохранить параметры фильтрации можно также в Map.
 //    • Отфильтровать ноутбуки их первоначального множества и вывести проходящие по условиям.
     public static void main(String[] args) {
-        Integer result = LaptopSearchApp.start();
+        Integer result = SearchApp.start();
         System.exit(result);
     }
 }
