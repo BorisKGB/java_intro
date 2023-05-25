@@ -1,5 +1,9 @@
 package ru.java.study.lesson6.hw;
 
+import ru.java.study.lesson6.hw.model.Filter;
+import ru.java.study.lesson6.hw.model.Record;
+import ru.java.study.lesson6.hw.model.SearchData;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
@@ -9,14 +13,14 @@ import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
 public class SearchApp {
-    public static Scanner iScanner;
+    private static Scanner iScanner;
     private static Logger logger;
-    private static String logFile =
-            String.join(File.separator, new String[] {"data", "lesson6", "hw", "LaptopSearchApp.log"});
-    public static String csvFilePath =
+    private static final String logFile =
+            String.join(File.separator, new String[] {"data", "lesson6", "hw", "SearchApp.log"});
+    private static String csvFilePath =
             String.join(File.separator, new String[] {"data", "lesson6", "hw", "laptops_some_data.csv"});
-    public static String csvFileDataDelimiter = "|";
-    public static boolean executionError = false;
+    private static String csvFileDataDelimiter = "|";
+    private static boolean executionError = false;
 
     /**
      * Application start point
@@ -48,7 +52,7 @@ public class SearchApp {
      */
     private static void mainMenu() {
         boolean continueFlag = true;
-        String userChoice = "";
+        String userChoice;
         while (continueFlag) {
             logDebug("Show main menu");
             System.out.println("-".repeat(10));
@@ -63,7 +67,7 @@ public class SearchApp {
                     filtersMenu();
                     break;
                 case "2":
-                    SearchData.printRecords(SearchData.getRecords());
+                    printRecords(SearchData.getRecords());
                     break;
                 case "3":
                     continueFlag = false;
@@ -116,8 +120,8 @@ public class SearchApp {
     public static void updateFilterMenu(int filterNum) {
         Filter filter = SearchData.getFilterByNum(filterNum);
         Filter newFilter;
-        logDebug(String.format("Updating %s filter", filter.name));
-        if (Record.fieldTypes.get(filter.name).equals(Record.StringField)) {
+        logDebug(String.format("Updating %s filter", filter.getName()));
+        if (Record.fieldType(filter.getName()).equals(Record.StringField)) {
             newFilter = updateFilterValues(filter);
         } else {
             System.out.println("-".repeat(10));
@@ -139,11 +143,18 @@ public class SearchApp {
             }
         }
         SearchData.updateFilterByNum(filterNum, newFilter);
+        logDebug(String.format("Filter %s set to %s", newFilter.getName(), newFilter));
     }
 
+    /**
+     * Ask user to check possible values in filter
+     * @param filter filter to update
+     * @return new filter object
+     */
     private static Filter updateFilterValues(Filter filter) {
+        logDebug(String.format("Updating filter %s Values", filter.getName()));
         Set<String> allowedValues = new HashSet<>();
-        List<String> uniqueValuesList = new ArrayList<>(Record.uniqueValues.get(filter.name));
+        List<String> uniqueValuesList = Record.getUniqueValuesAsList(filter.getName());
         int counter = 1;
         System.out.println("Допустимые значения:");
         for (String uniqueValue : uniqueValuesList) {
@@ -156,18 +167,20 @@ public class SearchApp {
         while (userScanner.hasNextInt()) {
             allowedValues.add(uniqueValuesList.get(userScanner.nextInt()-1));
         }
-        return new Filter(filter.name, allowedValues);
+        return new Filter(filter.getName(), allowedValues);
     }
 
+    /**
+     * Ask user to set intervals in filter
+     * @param filter filter to update
+     * @return new filter object
+     */
     private static Filter updateFilterIntervals(Filter filter) {
+        logDebug(String.format("Updating filter %s Intervals", filter.getName()));
         Double moreThen = null;
         Double lessThen = null;
-        System.out.printf("Значения поля %s находятся в диапазоне от %s до %s\n", filter.name,
-                // TODO: probably try other convert variants:
-                //   - .stream().min(o1, o2) -> Double.compare(Double.parseDouble(o1), Double.parseDouble(o2))
-                //   - .stream().mapToDouble(s -> Double.parseDouble(s)).min()
-                Record.uniqueValues.get(filter.name).stream().min(Comparator.comparingDouble(Double::parseDouble)).get(),
-                Record.uniqueValues.get(filter.name).stream().max(Comparator.comparingDouble(Double::parseDouble)).get());
+        System.out.printf("Значения поля %s находятся в диапазоне от %s до %s\n", filter.getName(),
+                Record.getMinValue(filter.getName()), Record.getMaxValue(filter.getName()));
         System.out.print("Введите минимальное значение фильтра или ничего > ");
         String userInput = iScanner.nextLine();
         if (!userInput.isEmpty()) {
@@ -186,7 +199,7 @@ public class SearchApp {
                 System.out.println("Параметр не распознан, значение не задано");
             }
         }
-        return new Filter(filter.name, moreThen, lessThen);
+        return new Filter(filter.getName(), moreThen, lessThen);
     }
 
     /**
@@ -200,12 +213,26 @@ public class SearchApp {
         }
     }
 
+
     /**
      * Fancy print filter state
      * @param filter filter which state to print
      */
     public static void printFilter(Filter filter, String prefix) {
         System.out.printf("%s. %s\n", prefix, filter);
+    }
+
+    /**
+     * Fancy print Records
+     * @param records Set of Record objects to print
+     */
+    public static void printRecords(Set<Record> records) {
+        int counter = 1;
+        for (Record record : records) {
+            System.out.printf("%d: %s\n", counter, record);
+            counter++;
+        }
+        logDebug(String.format("Printed %d records of %d", counter-1, SearchData.getRecordsSize()));
     }
 
     /**
@@ -222,10 +249,8 @@ public class SearchApp {
             fh.setFormatter(new SimpleFormatter());
         } catch (IOException e) {
             System.out.printf("ERROR: Unable to open log file '%s'", logFile);
-            executionError = true;
-            return;
+            setExecutionError();
         }
-
     }
 
     /**
@@ -240,6 +265,7 @@ public class SearchApp {
         }
         System.out.printf("Использовать '%s' как разделитель ячеек в файле '%s'? (Y/n) ",
                 csvFileDataDelimiter, csvFilePath);
+        // Todo: probably need to cover this with 'while (delimiterIncorrect) {... if (!delimiter.equals("")) ....
         choice = iScanner.nextLine();
         if (!(choice.equals("") || choice.equalsIgnoreCase("y"))) {
             System.out.print("Укажите свой разделитель: ");
@@ -281,5 +307,8 @@ public class SearchApp {
     public static void logError(String message, boolean showToUser) {
         logger.severe(message);
         if (showToUser) System.out.printf("ERROR: %s\n", message);
+    }
+    public static void setExecutionError() {
+        executionError = true;
     }
 }

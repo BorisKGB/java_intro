@@ -1,0 +1,66 @@
+мая 25, 2023 3:42:08 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: Application start
+мая 25, 2023 3:42:12 PM ru.java.study.lesson6.hw.SearchApp logInfo
+INFO: Loading csv file 'data/lesson6/hw/laptops_some_data.csv'
+мая 25, 2023 3:42:12 PM ru.java.study.lesson6.hw.SearchApp logInfo
+INFO: Из файла 'data/lesson6/hw/laptops_some_data.csv' получено 50 записей.
+мая 25, 2023 3:42:12 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: Show main menu
+мая 25, 2023 3:42:13 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: User action '2'
+мая 25, 2023 3:42:13 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: Printed 50 records of 50
+мая 25, 2023 3:42:13 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: Show main menu
+мая 25, 2023 3:42:15 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: User action '1'
+мая 25, 2023 3:42:15 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: Show filters menu
+мая 25, 2023 3:42:17 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: User action '1'
+мая 25, 2023 3:42:17 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: Updating Manufacturer filter
+мая 25, 2023 3:42:17 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: Updating filter Manufacturer Values
+мая 25, 2023 3:42:21 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: Filter Manufacturer set to Manufacturer: [Lenovo, Dell, Toshiba]
+мая 25, 2023 3:42:25 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: User action '0'
+мая 25, 2023 3:42:25 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: Exit filters menu
+мая 25, 2023 3:42:25 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: Show main menu
+мая 25, 2023 3:42:30 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: User action '2'
+мая 25, 2023 3:42:30 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: Printed 24 records of 50
+мая 25, 2023 3:42:30 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: Show main menu
+мая 25, 2023 3:42:41 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: User action '1'
+мая 25, 2023 3:42:41 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: Show filters menu
+мая 25, 2023 3:42:43 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: User action '3'
+мая 25, 2023 3:42:43 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: Updating Screen size filter
+мая 25, 2023 3:42:46 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: Updating filter Screen size Intervals
+мая 25, 2023 3:42:59 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: Filter Screen size set to Screen size: Значения от 12.0 до 15.0
+мая 25, 2023 3:43:05 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: User action '0'
+мая 25, 2023 3:43:05 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: Exit filters menu
+мая 25, 2023 3:43:05 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: Show main menu
+мая 25, 2023 3:43:07 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: User action '2'
+мая 25, 2023 3:43:07 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: Printed 7 records of 50
+мая 25, 2023 3:43:07 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: Show main menu
+мая 25, 2023 3:43:11 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: User action '3'
+мая 25, 2023 3:43:11 PM ru.java.study.lesson6.hw.SearchApp logDebug
+FINE: Application end
